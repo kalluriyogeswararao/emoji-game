@@ -1,0 +1,32 @@
+.bg-header-container {
+  background-color: #ffffff30;
+  padding: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.game-heading {
+  font-family: 'roboto';
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 600;
+}
+.emoji-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+.score {
+  font-family: 'roboto';
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 600;
+  margin-right: 80px;
+}
+.score-container {
+  display: flex;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+}

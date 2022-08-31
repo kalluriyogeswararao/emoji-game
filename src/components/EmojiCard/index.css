@@ -1,0 +1,13 @@
+.emoji-container {
+  background-color: #ffffff33;
+  padding: 25px;
+  border-radius: 20px;
+  list-style-type: none;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ffffff33;
+}
+.emoji-image {
+  width: 120px;
+  height: 120px;
+}

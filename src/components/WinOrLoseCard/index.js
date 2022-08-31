@@ -1,59 +1,33 @@
 import './index.css'
 
-const WinOrLoseCard = props => {
-  const {score, isGameStatus, clickPlayAgain} = props
+const LOSE_IMAGE = 'https://assets.ccbp.in/frontend/react-js/lose-game-img.png'
+const WON_IMAGE = 'https://assets.ccbp.in/frontend/react-js/won-game-img.png'
 
-  const onClickPlayAgain = () => {
-    clickPlayAgain(true)
-  }
+const WinOrLoseCard = props => {
+  const {isWon, onClickPlayAgain, score} = props
+  const imageUrl = isWon ? WON_IMAGE : LOSE_IMAGE
+  const gameStatus = isWon ? 'You Won' : 'You Lose'
+  const scoreLabel = isWon ? 'Best Score' : 'Score'
 
   return (
-    <div className="result-container">
-      <div className="bg-header">
-        <div className="logo-container">
-          <img
-            src="https://assets.ccbp.in/frontend/react-js/game-logo-img.png"
-            alt="emoji logo"
-            className="emoji-logo"
-          />
-          <h1 className="game-heading">Emoji Game</h1>
-        </div>
+    <div className="win-or-lose-card">
+      <div className="details-section">
+        <h1 className="game-status">{gameStatus}</h1>
+        <p className="current-score-label">{scoreLabel}</p>
+        <p className="current-score-value">{score}/12</p>
+        <button
+          type="button"
+          className="play-again-button"
+          onClick={onClickPlayAgain}
+        >
+          Play Again
+        </button>
       </div>
-      {isGameStatus && (
-        <div className="display-result-container">
-          <div className="result-data">
-            <h1 className="won-heading">You Won</h1>
-            <p className="score-title">Best Score</p>
-            <p className="result-score">{score}/12</p>
-            <button className="button" type="button" onClick={onClickPlayAgain}>
-              Play Again
-            </button>
-          </div>
-          <img
-            src="https://assets.ccbp.in/frontend/react-js/won-game-img.png"
-            alt="win"
-            className="won-image"
-          />
-        </div>
-      )}
-      {!isGameStatus && (
-        <div className="display-result-container">
-          <div className="result-data">
-            <h1 className="won-heading">You Lose</h1>
-            <p className="score-title">Score</p>
-            <p className="result-score">{score}/12</p>
-            <button className="button" type="button" onClick={onClickPlayAgain}>
-              Play Again
-            </button>
-          </div>
-          <img
-            src="https://assets.ccbp.in/frontend/react-js/lose-game-img.png"
-            alt="lose"
-            className="won-image"
-          />
-        </div>
-      )}
+      <div className="image-section">
+        <img className="win-or-lose-image" src={imageUrl} alt="win or lose" />
+      </div>
     </div>
   )
 }
+
 export default WinOrLoseCard

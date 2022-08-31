@@ -1,21 +1,27 @@
-* {
-  margin: 0;
-  padding: 0;
-  font-family: 'roboto';
-}
-
-.bg-container {
-  background-image: linear-gradient(#9796f0, #fbc7d4);
-  height: 100vh;
-  width: 100vw;
-}
-
-.all-emojis {
+.app-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  background-image: linear-gradient(
+    to bottom right,
+    #9796f0 0.5%,
+    #fbc7d4 150%
+  );
+  min-height: 100vh;
+}
+
+.emoji-game-body {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  width: 60%;
-  margin: auto;
+  flex: 1;
+}
+
+.emojis-list-container {
+  display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-  padding: 50px;
+  width: 80%;
+  margin: auto;
+  padding: 0px;
+  max-width: 1000px;
 }

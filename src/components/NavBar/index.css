@@ -1,32 +1,60 @@
-.bg-header-container {
-  background-color: #ffffff30;
-  padding: 20px;
+.nav-bar-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  background-color: #ffffff33;
+  padding: 8px;
+}
+
+.title-with-score-container {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 80%;
+  max-width: 1000px;
+}
+
+.logo-and-title-container {
+  display: flex;
   align-items: center;
 }
-.game-heading {
-  font-family: 'roboto';
-  font-size: 20px;
-  color: #ffffff;
-  font-weight: 600;
-}
+
 .emoji-logo {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
+  width: 24px;
 }
-.score {
-  font-family: 'roboto';
-  font-size: 20px;
+
+@media screen and (min-width: 768px) {
+  .emoji-logo {
+    width: 48px;
+  }
+}
+
+.title {
   color: #ffffff;
-  font-weight: 600;
-  margin-right: 80px;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: bold;
 }
-.score-container {
+
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 24px;
+  }
+}
+
+.scores-container {
   display: flex;
 }
-.logo-container {
-  display: flex;
-  align-items: center;
+
+.score {
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .score {
+    font-size: 24px;
+    margin-left: 32px;
+  }
 }
